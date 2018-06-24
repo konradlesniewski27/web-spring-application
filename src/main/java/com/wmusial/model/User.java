@@ -1,22 +1,45 @@
 package com.wmusial.model;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "first_name")
     private String firstName;
-
+    @Column(name = "last_name")
     private String lastName;
 
     private String email;
+    @Column(name = "avatar_url")
+    private String avatarUrl;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String email) {
+
+
+
+
+    public User(String firstName, String lastName, String email, String avatarUrl) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.avatarUrl = avatarUrl;
+
+    }
+
+
+    public User(Long id, String firstName, String lastName, String email, String avatarUrl) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.avatarUrl = avatarUrl;
     }
 
     public Long getId() {
@@ -33,5 +56,9 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
     }
 }

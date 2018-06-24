@@ -34,6 +34,13 @@
                        type="email" placeholder="Wpisz email" required>
             </div>
         </div>
+        <div class="form-group">
+                    <label for="avatarUrl" class="col-md-2 control-label">Avatar:</label>
+                    <div class="col-md-10">
+                        <input id="avatarUrl" name="avatarUrl" class="form-control"
+                               type="text" placeholder="Podaj url avatara" required>
+                    </div>
+                </div>
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
